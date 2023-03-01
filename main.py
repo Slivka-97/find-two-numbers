@@ -1,4 +1,4 @@
-def fun_enumeration(array, x):
+def fun_enumeration(array, x): # O(n^2)
     for i in range(len(array)):
         for j in range(len(array)-1):
             if array[i] + array[j+1] == x:
@@ -6,7 +6,7 @@ def fun_enumeration(array, x):
     return []
 
 
-def fun_with_set(array, x):
+def fun_with_set(array, x): #O(n)
     hash_set = set()
     for i in array:
         if x - i in hash_set:
@@ -15,7 +15,7 @@ def fun_with_set(array, x):
     return []
 
 
-def binary_search(array, x):
+def binary_search(array, x): #O(n log n)
     for i in range(len(array)):
         l = i + 1
         r = len(array) - 1
@@ -31,7 +31,7 @@ def binary_search(array, x):
     return []
 
 
-def two_pointer(array, x):
+def two_pointer(array, x): #O(n)
     l = 0
     r = len(array) - 1
     while l < r:
